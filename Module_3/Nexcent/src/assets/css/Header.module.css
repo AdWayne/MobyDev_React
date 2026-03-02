@@ -1,0 +1,48 @@
+.header {
+ background-color: #F5F7FA;
+ padding: 30px 105px;
+ color: black;
+ text-align: center;
+ display: flex;
+ justify-content: space-between;
+}
+
+.nav {
+ display: flex;
+ width: 588px;
+ justify-content: space-around;
+ list-style: none;
+ font-size: 16px;
+ line-height: 24px;
+}
+
+.navItem {
+ color: black;
+ cursor: pointer;
+ text-decoration: none;
+}
+
+.navItem:hover {
+ text-decoration: underline;
+}
+
+.btn-div {
+ display: flex;
+ gap: 14px;
+ justify-content: center;
+ text-align: center;
+ align-items: center;
+}
+
+.login {
+ background-color: transparent;
+ color: #4CAF4F;
+ padding: 10px 20px;
+ cursor: pointer;
+ width: 77px;
+}
+
+.sign-up {
+ width: 91px;
+ padding: 10px 20px;
+}

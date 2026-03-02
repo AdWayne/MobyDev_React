@@ -1,0 +1,281 @@
+$primary-color: #F5F7FA;
+$gray-color: #4d4d4d;
+$green-color: #4CAF4F;
+$silver-color: rgba(245, 247, 250, 1);
+@mixin padding {
+  padding: 0 144px;
+}
+@mixin btn{
+  background-color: $green-color;
+  display: flex;
+  gap: 10px;
+  color: white;
+  border: none;
+  padding: 14px 32px;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  border-radius: 4px;
+  font-weight: 500;
+  cursor: pointer;
+}
+@mixin flexspace-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@mixin h2{
+  font-size: 36px;
+  font-weight: 600;
+  color: rgba(77, 77, 77, 1);
+  line-height: 44px;
+}
+@mixin regular-text {
+  font-size: 14px;
+  font-weight: 400;
+  color: rgba(113, 113, 113, 1);
+  line-height: 20px;
+}
+@mixin h3{
+  font-size: 28px;
+  font-weight: 700;
+  color: rgba(77, 77, 77, 1);
+  line-height: 36px;
+}
+@mixin r2{
+  font-size: 16px;
+  font-weight: 400;
+  color: rgba(113, 113, 113, 1);
+  line-height: 24px;
+}
+@mixin h4{
+  font-size: 20px;
+  font-weight: 600;
+  color: rgba(76, 175, 79, 1);
+  line-height: 28px;
+}
+.main-body {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  font-family: 'Inter', sans-serif;
+  margin: 20px 0;
+  padding: 0;
+}
+.Unlock {
+  @include flexspace-between;
+  @include padding;
+}
+.container {
+  width: 661px;
+  height: 268px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.Unlock__title {
+  @include h2;
+  margin: 0;
+}
+.text-container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.text-container p {
+  @include regular-text;
+  margin: 0;
+  width: 601px;
+}
+.Learn_button {
+  @include btn;
+}
+
+.Achievements {
+  @include flexspace-between;
+  padding: 64px 144px;
+  background-color: $silver-color;
+}
+
+.Achievements_text_container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.Achievements__title {
+  @include h2;
+  margin: 0;
+}
+
+span {
+  color: $green-color;
+  font-size: 36px;
+  font-weight: 600;
+  line-height: 44px;
+  margin: 0;
+}
+
+
+.gap4{
+  width: 540px;
+  height: 160px;
+  display: grid;
+  gap: 40px;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.Achievements__members{
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  align-items: center;
+}
+
+.h3{
+  @include h3;
+  margin: 0;
+}
+
+.r2{
+  margin: 0;
+  @include r2;
+}
+
+.customers{
+  background-color: $silver-color;
+  display: flex;
+  padding: 32px 144px;
+  gap: 78px;
+}
+
+.content{
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.content-text{
+  @include regular-text;
+  margin-top: 8px;
+}
+
+.author{
+  @include h4;
+  margin: 0;
+}
+
+.author-container{
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.logos{
+  display: flex;
+  gap: 41px;
+}
+
+.logos img{
+  width: 48px;
+  height: 48px;
+}
+
+.footer-logos{
+  display: flex;
+  gap: 32px;
+  height: 48px;
+}
+
+.Text-btn{
+  @include flexspace-between;
+  @include h4;
+}
+
+.readmore {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    margin-top: 16px;
+}
+
+.blog_card_title{
+  margin: 0;
+}
+
+//это я изучил по ютубу оказываеться я мог все это время использовать &
+
+.blog {
+  @include padding;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+
+  img{
+    width: 368px;
+    height: 268px;
+  }
+
+  .right-arrow{
+    width: 24px;
+    height: 24px;
+  }
+
+  &_head {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;     
+    text-align: center;     
+  }
+
+  &_title {
+    @include h2;
+    margin: 0;
+  }
+
+  &_subtitle {
+    @include regular-text;
+    margin: 0;
+    max-width: 600px;      
+  }
+  
+  &_grid {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  &_card {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  &_card_text {
+    @include h4;
+    color: rgba(113, 113, 113, 1) !important;
+    margin: 0;
+    background-color: rgba(245, 247, 250, 1);
+    border-radius: 8px;
+    width: 280px;
+    height: 140px;
+    position: relative;
+    top: -100px;
+    left: 25px;
+    padding: 16px;
+    text-align: center;
+    box-shadow: 0px 8px 16px rgba(171, 190, 209, 0.4);
+  }
+  & span {
+    color: $green-color;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 28px;
+    align-items: center;
+    margin: 0;
+  }
+}
+

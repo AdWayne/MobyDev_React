@@ -1,0 +1,52 @@
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin rounded-corners($radius) {
+ border-radius: $radius;
+}
+
+$primary-color: #263238;
+$primary-color-silver: #F5F7FA;
+footer {
+ background-color: $primary-color;   
+ display: flex;
+ justify-content: space-between;
+ color: white;
+ padding: 64px 165px;
+}
+
+.round {
+ @include rounded-corners(20px);
+ width: 32px;
+ height: 32px;
+ @include flex-center;
+ display: flex;
+ background-color: #3b464c;
+}
+
+.company{
+ display: flex;
+ width: 635px;
+ justify-content: space-between;
+}
+
+.text-on-footer{
+  display: flex;
+  padding: 32px;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+  background-color: $primary-color-silver;
+}
+.footer-btn {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  justify-content: center;
+  text-align: center;
+  gap: 8px;
+  padding: 14px 32px;
+}
