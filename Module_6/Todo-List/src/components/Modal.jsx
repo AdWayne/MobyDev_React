@@ -25,7 +25,7 @@ const Modal = ({ isOpen, onClose, onApply }) => {
             className="modal-input"
             value={inputValue}
             onChange={(e) => setInputValue(e.target.value)}
-            onKeyDown={(e) => e.key === 'Enter' && handleApply()} // Добавление по Enter
+            onKeyDown={(e) => e.key === 'Enter' && handleApply()} 
           />
         </div>
 
