@@ -1,0 +1,21 @@
+$primary-color: #F5F7FA;
+$brand-color: #4CAF4F;
+
+.header-container {
+ background-color: $primary-color;
+ color: black;
+ text-align: center;
+}
+
+button {
+ background-color: $brand-color;
+ padding: 10px 20px;
+ font-size: 14px;
+ line-height: 20px;
+ color: #FFFFFF;
+ cursor: pointer;
+ border: none;
+ border-radius: 6px;
+ width: fit-content;
+ height: fit-content;
+}

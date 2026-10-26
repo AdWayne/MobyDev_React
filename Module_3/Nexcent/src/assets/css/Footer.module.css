@@ -1,0 +1,79 @@
+footer {
+  background-color: #263238;
+  color: white;
+  padding: 64px 165px;
+}
+.company-info {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  height: 189.5px;
+}
+.social-icons {
+  display: flex;
+  gap: 16px;
+  margin-top: 10px;
+}
+.contact-title {
+  margin: 0px;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 28px;
+  font-style: SemiBold;
+}
+.contact-text p{
+    margin-top: 15px;
+}
+.contact-container {
+  margin: 0px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 160px;
+  height: 200px;
+}
+.email-container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 255px;
+}
+.email-field {
+  display: flex;
+  align-items: center;
+  background: #515b60;
+  border-radius: 8px;    
+  height: 40px;
+  color: #ffffff;
+}
+.input {
+  flex: 1;
+  border: none;
+  background: transparent;
+  outline: none;
+  padding: 8px 10px;
+  color: #ffffff;
+}
+.input::placeholder {
+  color: #ffffff;
+  opacity: 1;
+}
+.sendBtn {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 8px;
+}
+.newsletter-title {
+  margin: 0px;
+  font-weight: 600;
+  font-size: 64px;
+  line-height: 76px;
+  color: #263238;
+  width: 887px;
+  text-align: center;
+  font-style: semi-bold;
+}

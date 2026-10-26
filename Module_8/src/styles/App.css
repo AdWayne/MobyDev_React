@@ -1,0 +1,280 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+
+:root {
+  --bg-color: #ffffff;
+  --text-color: #252525;
+  --modal-bg: #ffffff;
+  --border-color: #6C63FF;
+}
+
+
+body.dark-theme {
+  --bg-color: #252525;
+  --text-color: #ffffff;
+  --modal-bg: #252525;
+  --border-color: white;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  padding-top: 40px;
+}
+
+.container {
+  width: 100%;
+  max-width: 750px;
+  padding: 30px 16px;
+  position: relative;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 18px;
+  font-size: 24px;
+}
+
+.controls {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 24px;
+}
+
+.search-box {
+  position: relative;
+  flex: 1;
+}
+
+.search-box input {
+  width: 100%;
+  padding: 8px 36px 8px 12px;
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+  background: transparent;
+  color: var(--text-color);
+  outline: none;
+}
+
+.search-icon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #6c5ce7;
+}
+
+.filter-select {
+  background-color: #6c5ce7;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 0 12px;
+  font-weight: bold;
+  cursor: pointer;
+  border-style: none;
+}
+
+.controls button {
+  background-color: #6c5ce7;
+  border: none;
+  border-radius: 5px;
+  padding: 0 12px;
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.todo-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.todo-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 0;
+  border-bottom: 1px solid rgba(108, 92, 231, 0.4);
+}
+
+.todo-checkbox {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #6c5ce7;
+  border-radius: 4px;
+  background-color: transparent;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 14px;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+}
+
+.todo-checkbox:checked {
+  background-color: #6c5ce7;
+}
+
+.todo-checkbox:checked::after {
+  content: "✔";
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.todo-text {
+  flex: 1;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  color: var(--text-color);
+  word-break: break-word;
+}
+
+.todo-text.completed {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
+.todo-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-left: 12px;
+}
+
+.icon-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.7;
+  transition: opacity 0.2s ease, transform 0.1s ease;
+}
+
+.icon-btn:hover {
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+.icon-btn img {
+  width: 16px;
+  height: 16px;
+}
+
+.empty-state {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 20px;
+}
+
+.empty-icon {
+  font-size: 48px;
+  margin-bottom: 8px;
+}
+
+.fab-btn {
+  position: fixed;
+  bottom: 40px;
+  right: calc(50% - 240px);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #6c5ce7;
+  color: white;
+  border: none;
+  font-size: 28px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(108, 92, 231, 0.4);
+}
+
+@media (max-width: 550px) {
+  .fab-btn {
+    right: 20px;
+  }
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-card {
+  border: 1px solid var(--border-color);
+  background: var(--modal-bg);
+  padding: 24px;
+  border-radius: 12px;
+  width: 90%;
+  height: 289px;
+  max-width: 400px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+}
+
+.modal-card h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.modal-card input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #6c5ce7;
+  border-radius: 5px;
+  background: transparent;
+  color: var(--text-color);
+  margin-bottom: 24px;
+  outline: none;
+}
+
+.modal-actions {
+  margin-top: 100px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn-cancel {
+  border: 1px solid #6c5ce7;
+  background: transparent;
+  color: #6c5ce7;
+  padding: 8px 18px;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.btn-apply {
+  background-color: #6c5ce7;
+  color: white;
+  border: none;
+  padding: 8px 22px;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}

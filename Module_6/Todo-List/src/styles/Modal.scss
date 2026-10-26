@@ -1,0 +1,89 @@
+@use "sass:color";
+$primary-color: #6C63FF;
+
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: white;
+  width: 468px;
+  height: 273px;
+  padding: 8px 16px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .modal-title {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+  }
+
+  .input-group {
+    width: 100%;
+    margin-bottom: auto;
+
+    .modal-input {
+      width: 100%;
+      max-width: 440px;
+      padding: 10px 15px;
+      border: 1.5px solid $primary-color;
+      border-radius: 5px;
+      outline: none;
+      font-size: 16px;
+
+      &::placeholder {
+        color: #c3c1e5;
+      }
+    }
+  }
+
+  .modal-actions {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    button {
+      padding: 10px 25px;
+      border-radius: 5px;
+      font-weight: 600;
+      cursor: pointer;
+      font-size: 14px;
+      transition: all 0.2s;
+    }
+
+    .btn-cancel {
+      background: transparent;
+      color: $primary-color;
+      border: 1.5px solid $primary-color;
+
+      &:hover {
+        background: rgba(108, 99, 255, 0.05);
+      }
+    }
+
+    .btn-apply {
+      background: $primary-color;
+      color: white;
+      border: none;
+
+      &:hover {
+        background: color.adjust($primary-color, $lightness: -10%);
+      }
+    }
+  }
+}
