@@ -1,0 +1,241 @@
+.footer {
+    width: 100%;
+    background-color: #232536;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 36px 0;
+    box-sizing: border-box;
+}
+
+.footer * {
+    box-sizing: border-box;
+}
+
+.footer-container {
+    padding: 20px 80px;
+}
+
+.footer-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 32px;
+}
+
+.footer-logo {
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 700;
+    text-decoration: none;
+    letter-spacing: -0.5px;
+}
+
+.footer-nav {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.footer-nav a {
+    color: #ffffff;
+    font-size: 16px;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.footer-nav a:hover {
+    color: #ffd050;
+}
+
+.footer-subscribe {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    background-color: #2e3040;
+    padding: 48px 40px;
+    min-height: 155px;
+    margin-bottom: 30px;
+}
+
+.footer-subscribe h2 {
+    margin: 0;
+    max-width: 562px;
+    flex: 1;
+    color: #ffffff;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 48px;
+    letter-spacing: -2px;
+    font-family: Sen;
+}
+
+.footer-form {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    flex: 1;
+    max-width: 645px;
+}
+
+.footer-form input {
+    flex: 1;
+    width: 100%;
+    min-width: 0;
+    height: 56px;
+    padding: 0 18px;
+    color: #ffffff;
+    background-color: transparent;
+    border: 1px solid #414351;
+    outline: none;
+    font-size: 14px;
+}
+
+.footer-form input::placeholder {
+    color: #6d6e78;
+}
+
+.footer-form input:focus {
+    border-color: #ffd050;
+}
+
+.footer-form button {
+    flex-shrink: 0;
+    height: 56px;
+    max-width: 179px;
+    width: 100%;
+    min-width: 108px;
+    padding: 0 20px;
+    border: none;
+    background-color: #ffd050;
+    color: #232536;
+    font-size: 12px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.footer-form button:hover {
+    background-color: #edc044;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.footer-contact p {
+    margin: 0;
+    color: #b7b8c2;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 28px;
+}
+
+.footer-socials {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.footer-socials a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #6d6e76;
+    transition: color 0.2s ease;
+}
+
+.footer-socials a:hover {
+    color: #ffd050;
+}
+
+.footer-socials svg {
+    width: 16px;
+    height: 16px;
+    fill: currentColor;
+}
+
+@media (max-width: 900px) {
+    .footer-container {
+        padding: 0 24px;
+    }
+
+    .footer-subscribe {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 24px;
+        padding: 36px 28px;
+    }
+
+    .footer-subscribe h2 {
+        max-width: 100%;
+    }
+
+    .footer-form {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .footer {
+        padding: 28px 0;
+    }
+
+    .footer-container {
+        padding: 0 18px;
+    }
+
+    .footer-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 24px;
+    }
+
+    .footer-nav {
+        flex-wrap: wrap;
+        gap: 14px 18px;
+    }
+
+    .footer-subscribe {
+        padding: 28px 20px;
+        gap: 20px;
+    }
+
+    .footer-subscribe h2 {
+        font-size: 18px;
+    }
+
+    .footer-subscribe h2 br {
+        display: none;
+    }
+
+    .footer-form {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .footer-form input,
+    .footer-form button {
+        width: 100%;
+        height: 42px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .footer-contact p {
+        font-size: 11px;
+    }
+
+    .footer-socials {
+        gap: 18px;
+    }
+}
