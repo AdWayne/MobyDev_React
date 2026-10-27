@@ -141,8 +141,9 @@ h1 {
 
 .todo-text {
   flex: 1;
-  font-size: 16px;
-  font-weight: 600;
+  font-weight: 500;
+  font-family: Kanit;
+  font-size: 20px;
   cursor: pointer;
   color: var(--text-color);
   word-break: break-word;
@@ -234,7 +235,7 @@ h1 {
   width: 90%;
   height: 289px;
   max-width: 400px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
 }
 
 .modal-card h2 {
